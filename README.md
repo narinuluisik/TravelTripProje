@@ -1,4 +1,4 @@
-# Tati && Seyahat Rehberi Projesi
+# Tatil && Seyahat Rehberi Projesi
 
 Bu proje, seyahat rehberleri, oteller, restoranlar ve müzeler hakkında bilgi sağlayan bir web uygulamasıdır. Kullanıcılar, ilgilendikleri alanları seçerek seyahat planlarını daha kolay yapabilirler. Proje, ASP.NET, MVC, Entity Framework ve diğer web geliştirme teknolojilerini kullanarak oluşturulmuştur.
 
