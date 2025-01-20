@@ -1,0 +1,54 @@
+﻿@model List<TravelTripProje.Models.Siniflar.Hotel>
+
+@{
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h2 style="text-align: center; margin-top: 30px; font-weight: bold;">oteller</h2>
+
+<!DOCTYPE HTML>
+
+<head>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<
+
+<div class="single">
+    <div class="container">
+        <div class="col-md-8 single-main">
+            <br />    <br />
+            @foreach (var x in Model)
+            {
+                <div class="single-grid">
+
+                    <img src="@x.ImageUrl" alt="" style="margin-bottom:20px ; width: 650px; height: 365px; overflow: hidden;" />
+                    <br />
+                    <p style="font-weight: 600; font-size: 18px; color: #333;">
+                        @x.Name
+                    </p> <p>
+                        @x.Description
+                    </p>
+                    <p>
+                        @x.Location
+                    </p>
+                </div>
+                <br /> <br />
+            }
+
+
+
+        </div>
+    </div>
+</div>

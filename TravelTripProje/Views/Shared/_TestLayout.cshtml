@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Home :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web/js/jquery.min.js"></script>
+    <script src="~/web/js/responsiveslides.min.js"></script>
+
+    <style>
+        /* Üst menü ayarları */
+        #nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+        }
+
+            #nav li {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Ana menü öğeleri */
+            #nav a {
+                display: block;
+                padding: 14px 20px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            #nav li:hover {
+                background-color: #4CAF50;
+            }
+
+            /* Alt menülerin başlangıçta gizlenmesi */
+            #nav .subs {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background-color: #fff;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                border-radius: 8px;
+                min-width: 180px;
+            }
+
+            /* Ana menü öğesinin üzerine gelindiğinde alt menünün açılması */
+            #nav li:hover .subs {
+                display: block;
+            }
+
+            /* Alt menü öğelerinin stilini belirlemek */
+            #nav .subs li {
+                padding: 10px 20px;
+                text-align: left;
+            }
+
+                /* Alt menü öğelerinin üzerine gelindiğinde renk değişimi */
+                #nav .subs li:hover {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><h1>Nar Tatil Blog</h1></a>
+            </div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <img src="~/web/images/contact.png" alt="">
+                </div>
+                <div class="grid1-l-desc">
+                    <p>İletişim : +91 00000-55555</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/Default/Index/">Ana Sayfa</a></li>
+                <li><a class="hsubs" href="/About/Index/">Hakkımızda</a></li>
+                <li>
+                    <a class="hsubs" href="/Rehber/Index/">Rehber</a>
+                    <ul class="subs">
+                        <li><a href="/Rehber/Hotels">Oteller</a></li>
+                        <li><a href="/Rehber/Restaurants">Restoranlar</a></li>
+                        <li><a href="/Rehber/Museums">Müzeler</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="/Blog/Index/">Blogum</a></li>
+                <li><a href="/iletisim/Index">İletişim</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2025 Tatil - Seyahat. Tüm hakları saklıdır <a href="http://w3layouts.com">W3Layouts</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

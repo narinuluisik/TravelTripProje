@@ -1,0 +1,80 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3 class="about-title">Hakkımızda</h3>
+
+            @foreach (var x in Model)
+            {
+                <div class="about-item">
+                    <div class="about-img">
+                        <img src="@x.Fotourl" alt="Hakkımızda Fotoğrafı" class="about-image" />
+                    </div>
+                    <div class="about-description">
+                        <p>@x.Aciklama</p>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .about {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .about-title {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 40px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .about-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .about-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .about-img {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .about-description {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+        padding: 0 20px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+</style>
